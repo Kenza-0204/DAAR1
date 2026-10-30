@@ -1,5 +1,5 @@
 
-package org.daar;
+package org.daar.regex;
 
 public class RegexException
         extends IllegalArgumentException {

@@ -1,4 +1,4 @@
-package org.daar;
+package org.daar.regex;
 
 public class RegexNode {
     public enum Type {
