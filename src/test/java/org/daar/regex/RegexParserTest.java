@@ -1,10 +1,8 @@
-
 package org.daar.regex;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 public class RegexParserTest {
 
     private final RegexParser parser = new RegexParser();
