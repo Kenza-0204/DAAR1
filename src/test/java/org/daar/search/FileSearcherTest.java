@@ -64,4 +64,16 @@ class FileSearcherTest {
         assertThrows(IOException.class,
                 () -> searcher.search(file.toString(), "DAAR"));
     }
+
+    @Test
+    void searchWithAutomaton() throws IOException {
+        Path file = folder.resolve("regex.txt");
+        Files.writeString(file, "bonjour\nchat\nchien\nmaison");
+
+        LineMatcher matcher = line -> line.contains("ch");
+
+        List<String> results = searcher.search(file.toString(), matcher);
+
+        assertEquals(List.of("chat", "chien"), results);
+    }
 }
