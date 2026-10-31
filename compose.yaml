@@ -1,0 +1,8 @@
+
+services:
+  egrep:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/data:ro
